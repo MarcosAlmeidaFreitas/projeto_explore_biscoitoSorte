@@ -1,0 +1,81 @@
+/* Configurações da página */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root{
+  font-size: 62.5%;
+
+
+  /* Variáveis de cores usadas no projeto */
+  --color-purple-gradiente: linear-gradient(45deg, #190361 0%, #B0F 100%);
+  --color-white: white;
+  --color-dark-blue: #34355B;
+}
+
+
+.hide{
+  display: none;
+}
+
+body{
+  background: var(--color-purple-gradiente);
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+/* Configurações de textos usados na Screen 1 e 2 */
+main{
+  width: min(42.8rem, 90%);
+  background-color: var(--color-white);
+  padding: 4.8rem 6.4rem 6.4rem 6.4rem;
+}
+
+h1{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: var(--color-dark-blue);
+  text-align: center;
+}
+
+h3{
+  font-family: 'DM Sans', sans-serif;
+  font-size: 1.5rem;
+  text-align: center;
+  color: var(--color-dark-blue);
+  margin-top: 1.4rem;
+  margin-bottom: 2.7rem;
+}
+
+
+.container-img{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container-img img{
+  width: 70%;
+  height: 70%;
+  object-fit: contain;
+}
+
+
+
+/* Elementos usados na Screen 1 */
+.screen1 .container-img img{
+  margin-left: -5rem;
+}
+
+
+
+
+
+/* Elementos usados na Screen 2 */
