@@ -14,13 +14,15 @@
   --color-white: white;
   --color-dark-blue: #34355B;
   --color-yellow: #FF9500;
+  --color-yellow2: #feac39;
   --color-baby-blue: #E4EDF1;
+  --color-black: black;
 }
-
 
 .hide{
   display: none;
 }
+
 
 body{
   background: var(--color-purple-gradiente);
@@ -71,6 +73,7 @@ h3{
 
 
 
+
 /* Elementos usados na Screen 1 */
 .screen1 .container-img img{
   margin-left: -5rem;
@@ -82,7 +85,7 @@ h3{
 
 
 /* Elementos usados na Screen 2 */
-.screen2{
+.screen2 .container{
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -93,7 +96,7 @@ h3{
   margin-top: 6.2rem;
 }
 
-button{
+ button{
   padding: 1.6rem;
   border: none;
   background-color: var(--color-yellow);
@@ -104,9 +107,67 @@ button{
   font-weight: 700;
   font-size: 1.5rem;
   color: var(--color-white);
+} 
+
+button:hover{
+  cursor: pointer;
+  background-color: var(--color-yellow2);
+  transform: scale(1.1);
+  transition: 500ms;
 }
 
 .container-message{
   background-color: var(--color-baby-blue);
-  width: min(29rem, 80%);
+  width: 100%;
+  height: min(14rem, 60%);
+  padding: 1rem;
+  margin-top: 1.7rem;
+  animation: myAnim 2s ease 0s 1 normal forwards;
+}
+
+#h2Message{
+  font-family: 'Dancing Script', sans-serif;
+  text-align: center;
+  font-style: normal;
+  line-height: normal;
+  font-size: 2.4rem;
+  color: var(--color-black);
+} 
+
+.screen1 .container-img:hover {
+  animation: shake 1s cubic-bezier(.36,.07,.19,.97) both infinite;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+
+@keyframes shake {
+  10%, 90% {
+    transform: translate3d(-2px, 0, 0);
+  }
+  
+  20%, 80% {
+    transform: translate3d(3px, 0, 0);
+  }
+
+  30%, 50%, 70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+
+  40%, 60% {
+    transform: translate3d(2px, 0, 0);
+  }
+}
+
+@keyframes myAnim {
+	0% {
+		opacity: 0;
+		transform: translateY(50px);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
 }
